@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+int x;
+printf("Enter a number to choice your food : ");
+scanf("%d",&x);
+switch(x)
+{
+case 1:
+printf("number :%d \nFood item = Dosa \nPrice = Rs50",x);
+break;
+case 2:
+printf("number :%d \nFood item = Fried rice veg \nPrice = Rs150",x);
+break;
+case 3:
+printf("number :%d \nFood item = Chicken Fried rice  \nPrice = Rs170",x);
+break;
+case 4:
+printf("number :%d \nFood item = Chicken 65 \nPrice = Rs110",x);
+break;
+case 5:
+printf("number :%d \nFood item = Chilli chicken \nPrice = Rs135",x);
+break;
+default:
+printf("the number you have entered is INVALID ");
+}
+return 0;
+}
