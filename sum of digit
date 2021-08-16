@@ -1,0 +1,17 @@
+// sum of digit of given number using do while loop //
+#include <stdio.h>
+int main()
+{
+	int a,x,rev=0,r,sum=0;
+	printf("enter a number: ");
+	scanf("%d",&a);
+	x=a;
+	do
+	{
+		rev=a%10;
+		sum=sum+rev;
+		a=a/10;
+    }while(a!=0);
+	printf("the sum of digit of given number %d is %d",x,sum);
+	return 0;
+}
