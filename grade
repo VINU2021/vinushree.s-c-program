@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+	int a,b,c,sum=0;
+	printf("enter mark:");
+	scanf("%d ",&a);
+	sum=a;
+	if(sum>=85&&sum<=100)
+	{
+		printf("grade A");
+	}
+	else if (sum>=70&&sum<=84)
+	{
+	    printf("Grade B");
+	}
+	else if(sum>=55&&sum<=69)
+	{
+		printf("Grade C");
+	}
+	else if(sum>=40&&sum<=54)
+	{
+		printf("Grade D");
+	}
+	else
+	{
+		printf("Grade F");
+	}
+	return 0;
+	}
+	
