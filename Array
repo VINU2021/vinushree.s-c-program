@@ -1,0 +1,42 @@
+#include<stdio.h>
+void main()
+{
+    int a[50][50],i,j,n,d1=0,d2=0;
+    int *ptr = &a;
+    printf("\n enter the size of the array:");
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+         printf("\n elements-[%d],[%d]:",i,j);
+          scanf("%d",&*((ptr+i*n)+j));
+        }
+    }
+    printf("\n the matrix:\n");
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("%d\t",*((ptr+i*n)+j));
+        }
+        printf("\n");
+    }
+    for(i=0;i<n;i++)
+    {
+      for(j=0;j<n;j++)
+      {
+          if(i==j)
+          {
+              d1+=(*((ptr+i*n)+j));
+          }
+          if((i+j)==(n-1))
+          {
+              d2+=(*((ptr+i*n)+j));
+          }
+      }
+    }
+    printf("\n sum of main diagonal=%d",d1);
+    printf("\n sum of opposite diagonal=%d",d2);
+    getch();
+}
