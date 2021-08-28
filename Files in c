@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+  char c;
+  FILE *fp,*fb;
+  fp=fopen("Newfile.txt","r");
+  fb=fopen("sourcefile.txt","w");
+  while(c!=EOF)
+  {
+    putchar(c);
+    c=getc(fp);
+  }
+  fprintf(fp,"%s","niatpac yM");
+    if(fp==NULL||fb==NULL)
+    {
+            printf("File does not exist..");
+    }
+      else
+            while((c=fgetc(fp))!=EOF)
+            {
+                  fputc(c,fb);
+            }
+      printf("\nFile copied to sourcefile.txt\n");
+  fclose(fp);
+  return 0;
+} 
